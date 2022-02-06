@@ -1,5 +1,5 @@
-// Stark's TinyPico OnAir Light Study 
-// todo list:  color URL's, color Buttons, Battery HW, Battery Code, Status page at root, OTA, 
+// Stark's TinyPico OnAir Light Device 
+// todo list: Battery HW, Battery Code, Status page at root, OTA, MQTT, Deep Sleep, 
 
 
 #include <Arduino.h>
