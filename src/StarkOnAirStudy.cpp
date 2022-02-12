@@ -32,7 +32,7 @@ String LED_STATE = "OFF";
 
 void setup() {
 
-  pinMode(9, INPUT_PULLUP);   // to read usb plugged in state
+  pinMode(9, INPUT);   // to read usb plugged in state
 
 // setup FastLED Strip
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
@@ -56,9 +56,20 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   server.begin();
+  
+  //just screwing around:
+
+             for(int dot = 0; dot < 10; dot++) { 
+                leds[dot].setRGB( 128, 0, 0 );
+              }
+             for(int dot = 10; dot < NUM_LEDS; dot++) { 
+                leds[dot].setRGB( 0, 0, 128 );
+              }
+              FastLED.show(); 
+              
   //light one pixel to act like a power light
-  leds[10].setRGB( 24, 24, 24 );
-  FastLED.show(); 
+  //  leds[10].setRGB( 24, 24, 24 );
+  // FastLED.show(); 
 }
 
 void loop(){
