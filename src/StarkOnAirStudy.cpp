@@ -57,7 +57,7 @@ void setup() {
   Serial.println(WiFi.localIP());
   server.begin();
   //light one pixel to act like a power light
-  leds[10].setRGB( 48, 48, 48 );
+  leds[10].setRGB( 24, 24, 24 );
   FastLED.show(); 
 }
 
@@ -113,7 +113,7 @@ void loop(){
               }
               FastLED.show(); 
 //light one pixel to act like a power light
-              leds[10].setRGB( 48, 48, 48 );
+              leds[10].setRGB( 24, 24, 24 );
   FastLED.show(); 
               Serial.println("FastLed cleared");
             } else {}
