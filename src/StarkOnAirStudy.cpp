@@ -57,19 +57,27 @@ void setup() {
   Serial.println(WiFi.localIP());
   server.begin();
   
-  //just screwing around:
+//just screwing around:
+//
+//             for(int dot = 0; dot < 6; dot++) { 
+//                leds[dot].setRGB( 128, 0, 0 );
+//              }
+//             for(int dot = 6; dot < 10; dot++) { 
+//                leds[dot].setRGB( 240, 0, 0 );
+//              }
+//             for(int dot = 10; dot < 12; dot++) { 
+//                leds[dot].setRGB( 0, 0, 240 );
+//              }
+//             for(int dot = 12; dot < NUM_LEDS; dot++) { 
+//                leds[dot].setRGB( 0, 0, 128 );
+//              }
+//              FastLED.show(); 
+//
 
-             for(int dot = 0; dot < 10; dot++) { 
-                leds[dot].setRGB( 128, 0, 0 );
-              }
-             for(int dot = 10; dot < NUM_LEDS; dot++) { 
-                leds[dot].setRGB( 0, 0, 128 );
-              }
-              FastLED.show(); 
-              
-  //light one pixel to act like a power light
-  //  leds[10].setRGB( 24, 24, 24 );
-  // FastLED.show(); 
+
+//light one pixel to act like a power light
+  leds[10].setRGB( 24, 24, 24 );
+  FastLED.show(); 
 }
 
 void loop(){
